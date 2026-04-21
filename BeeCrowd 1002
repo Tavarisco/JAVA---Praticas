@@ -1,0 +1,17 @@
+/*Pratica utilizando funções matematicas
+feito em 09/2025*/
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+       double Area, raio;
+       double n = 3.14159;
+       raio = sc.nextDouble();
+       Area = n * Math.pow(raio, 2);
+       System.out.printf("A=%.4f%n", Area);
+        sc.close();
+    }
+}
