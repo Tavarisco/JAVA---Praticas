@@ -1,40 +1,32 @@
 /*Leia 4 valores inteiros A, B, C e D. A seguir, se B for maior do que C e se D for maior do que A, e a soma de C com D for maior que a soma de A e B e se C e D, ambos, forem positivos e se a variável A for par escrever a mensagem "Valores aceitos", senão escrever "Valores nao aceitos". feito em 03/2026*/
 
-import java.util.Locale;
 import java.util.Scanner;
 
 
 public class Main {
 
     public static void main(String[] args) {
-        Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
         int a = sc.nextInt();
-        double cod;
-        int qtd = sc.nextInt();
-        switch (a){
-            case 1:
-                cod = 4.0;
-                break;
-            case 2:
-                cod = 4.50;
-                break;
-            case 3:
-                cod = 5.0;
-                break;
-            case 4:
-                cod = 2.0;
-                break;
-            case 5:
-                cod = 1.50;
-                break;
-            default:
-                cod = 0;
-                break;
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        int d = sc.nextInt();
 
+        int somaCD = c + d;
+        int somaAB = a + b;
+
+        if (b > c &&
+            d > a &&
+            somaCD > somaAB &&
+            c > 0 &&
+            d > 0 &&
+            a % 2 == 0
+        ){
+            System.out.println("Valores aceitos");
         }
-        System.out.printf("Total: R$ %.2f%n",  cod * qtd);
+        else
+            System.out.println("Valores nao aceitos");
 
         sc.close();
     }
