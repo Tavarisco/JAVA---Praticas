@@ -1,0 +1,21 @@
+/*Pratica de Media ponderada feito em 09/2025*/
+
+
+import java.util.Scanner;
+public class Main{
+  public static void main(String[] args){
+  Scanner sc = new Scanner(System.in);
+
+   double A, B, C;
+   int pesoA = 2;
+   int pesoB = 3;
+   int pesoC = 5;
+   A = sc.nextDouble();
+   B = sc.nextDouble();
+   C = sc.nextDouble();
+   int somaPesos = pesoA + pesoB + pesoC;
+   double media = ((A * pesoA) + (B * pesoB) + (C * pesoC)) / somaPesos;
+    System.out.printf("MEDIA = %.1f%n", media);
+    sc.close();
+  }
+}
