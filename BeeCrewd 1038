@@ -1,0 +1,42 @@
+/* Com base em um tabela de preços, fiz um codigo que calculasse o valor da conta a partir do codigo do item e o a quantidade. feito em 03/2026*/
+
+import java.util.Locale;
+import java.util.Scanner;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        double cod;
+        int qtd = sc.nextInt();
+        switch (a){
+            case 1:
+                cod = 4.0;
+                break;
+            case 2:
+                cod = 4.50;
+                break;
+            case 3:
+                cod = 5.0;
+                break;
+            case 4:
+                cod = 2.0;
+                break;
+            case 5:
+                cod = 1.50;
+                break;
+            default:
+                cod = 0;
+                break;
+
+        }
+        System.out.printf("Total: R$ %.2f%n",  cod * qtd);
+
+        sc.close();
+    }
+
+}
